@@ -1,7 +1,7 @@
 // Importing core Electron modules
 // - app: controls app lifecycle
 // - BrowserWindow: creates and manages app windows
-const {app, BrowserWindow} = require('electron');
+const {app, BrowserWindow, ipcMain} = require('electron');
 const path = require('path')
 
 // Function that creates a new "BrowserWindow" object/ instance
@@ -14,7 +14,7 @@ const createWindow = () => {
       preload: path.join(__dirname, 'preload.js'),
     },
   });
-
+  ipcMain.handle('ping', () => 'pong'); // handle listener in main process. done before loading html file, so handler guaranteed to be ready before renderer process tries to invoke it
   win.loadFile('index.html'); // loads the index.html file into the window. Returns Promise<void> which will resolve when page finished loading. 
 }
 
