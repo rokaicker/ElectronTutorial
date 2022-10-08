@@ -1,0 +1,22 @@
+{
+  "name": "electrontutorial",
+  "version": "1.0.0",
+  "description": "Electron Tutorial Project",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rokaicker/ElectronTutorial.git"
+  },
+  "author": "Rohan Kaicker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rokaicker/ElectronTutorial/issues"
+  },
+  "homepage": "https://github.com/rokaicker/ElectronTutorial#readme",
+  "devDependencies": {
+    "electron": "^21.1.0"
+  }
+}
